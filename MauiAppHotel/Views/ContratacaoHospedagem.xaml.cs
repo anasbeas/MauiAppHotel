@@ -6,4 +6,9 @@ public partial class ContratacaoHospedagem : ContentPage
 	{
 		InitializeComponent();
 	}
+    async void OnAvancarClicked(object sender, System.EventArgs e)
+    {
+        await Navigation.PushAsync(new AppSobre());
+    }
+
 }
