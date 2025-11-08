@@ -7,7 +7,7 @@
              BackgroundColor="{StaticResource Secondary}">
 
 
-    <VerticalStackLayout VerticalOptions="CenterAndExpand"
+    <VerticalStackLayout VerticalOptions="Center"
                           Padding="10">
 
         <Label 
@@ -53,7 +53,8 @@
                 <Label Text="Escolha sua suíte"/>
 
                 <Picker x:Name="pck_quarto"
-                        Title="Selecione sua Acomodação" />
+                        Title="Selecione sua Acomodação" 
+                        ItemDisplayBinding="{Binding Descricao}"/>
 
                 <Frame Padding="10"
                        Margin="10">
