@@ -4,7 +4,7 @@
              x:Class="MauiAppHotel.Views.ContratacaoHospedagem"
              Title="ContratacaoHospedagem"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="{StaticResource Secondary}">
+             BackgroundColor="{StaticResource Gray600}">
 
 
     <VerticalStackLayout VerticalOptions="Center"
@@ -14,7 +14,7 @@
             Text="Cálculo da Diária"
             FontFamily="GloriaHallelujahRegular"
             FontSize="50"
-            TextColor="{StaticResource Primary}" />
+            TextColor="{StaticResource Gray100}" />
 
         <Frame Padding="10">
             <VerticalStackLayout>
@@ -25,7 +25,7 @@
                            Text="Adultos:" />
 
                     <Label Grid.Row="0" Grid.Column="1"
-                           TextColor="{StaticResource Primary}"
+                           TextColor="{StaticResource Black}"
                            Text="{Binding Value}" 
                            BindingContext="{x:Reference stp_adultos}" />
 
@@ -39,7 +39,7 @@
                            Text="Crianças:" />
 
                     <Label Grid.Row="1" Grid.Column="1"
-                           TextColor="{StaticResource Primary}"
+                           TextColor="{StaticResource Black}"
                            Text="{Binding Value}"
                            BindingContext="{x:Reference stp_criancas}" />
 
@@ -63,6 +63,7 @@
                         <HorizontalStackLayout>
                             <Label Text="Check-in:"/>
                             <DatePicker x:Name="dtpck_checkin"
+                                        DateSelected="dtpck_checkin_DateSelected"
                                         Format="dd/mm/yyyy"/>
                         </HorizontalStackLayout>
 
@@ -73,9 +74,10 @@
                         </HorizontalStackLayout>
                     </VerticalStackLayout>
                 </Frame>
-
-                <Button Text="Avançar" Clicked="OnAvancarClicked" />
-
+                <VerticalStackLayout Spacing="10">
+                    <Button Text="Avançar" Clicked="OnAvancarHospedagemClicked" />
+                    <Button Text="Sobre" BackgroundColor="{StaticResource PrimaryDark}" Clicked="OnAvancarSobreClicked" />
+                </VerticalStackLayout>
             </VerticalStackLayout>
         </Frame>
     </VerticalStackLayout>
