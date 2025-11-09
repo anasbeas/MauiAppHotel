@@ -2,13 +2,13 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel.Views.AppSobre"
-             BackgroundColor="{StaticResource Secondary}">
+             BackgroundColor="{StaticResource Gray600}">
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="12" VerticalOptions="Start">
             <Label Text="Sobre o App"
                    FontFamily="GloriaHallelujahRegular"
                    FontSize="32"
-                   TextColor="{StaticResource Primary}" />
+                   TextColor="{StaticResource Gray100}" />
 
             <Frame Padding="16" CornerRadius="8" HasShadow="True">
                 <VerticalStackLayout Spacing="8">
@@ -19,7 +19,7 @@
                 </VerticalStackLayout>
             </Frame>
 
-            <Button Text="Voltar" Clicked="OnVoltarClicked" />
+            <Button Text="Voltar" BackgroundColor="{StaticResource PrimaryDark}" Clicked="OnVoltarClicked" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
